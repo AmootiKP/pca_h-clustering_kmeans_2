@@ -40,3 +40,12 @@ cl <- hclust(dist (data1, method="euclidean"), method="ward.D2")
 #Plot clusters
 plot(cl, cex = 0.8)
 
+#Define parameters and save in object
+descr1 <- paste ("Distance: ", "euclidean", sep="")
+descr2 <- paste ("Linkage: ", "complete", sep="")
+
+#Plot Clusters
+plot(cl, xlab=descr1, sub=descr2, cex = 0.8)
+
+#Print cluster order
+cl$order
